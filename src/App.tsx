@@ -1,25 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import Drawer from "./Drawer";
+import { useState } from "react";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{width: "100%"}}>
+    <div className="drawer w-1/3">
+      <input id="my-drawer" type="checkbox" className="drawer-toggle" />
+      <div className="drawer-content">
+        <label htmlFor="my-drawer" className="btn btn-primary drawer-button">
+          Open drawer
+        </label>
+        <p>hi</p>
+      </div>
+      <div className="drawer-side">
+        <label htmlFor="my-drawer" className="drawer-overlay"></label>
+        <ul className="menu p-4 bg-base-100 text-base-content">
+          <li>
+            <a>Sidebar Item 1</a>
+          </li>
+          <li>
+            <a>Sidebar Item 2</a>
+          </li>
+        </ul>
+      </div>
     </div>
+    <h1>Hello world</h1>
+    </div>
+    
   );
 }
 
